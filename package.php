@@ -32,8 +32,8 @@
 
 
     <!-- header section ends -->
-   <div class="heading" style="background: url(images/header-bg-1.png)no-repeat;">
-   <h1>about us</h1>
+   <div class="heading" style="background: url(images/header-bg-2.png)no-repeat;">
+   <h1>packages</h1>
    </div>
 
     <!-- footer section starts  -->

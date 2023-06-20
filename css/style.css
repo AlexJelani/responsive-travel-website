@@ -44,13 +44,31 @@ html::-webkit-scrollbar-thumb {
 section {
   padding: 5rem 10%;
 }
-.heading-title {
-  text-align:center;
-  margin-bottom:3rem;
-  font-size:6rem;
-  text-transform:uppercase;
-  color:var(--black);
 
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--black);
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--main-color);
+}
+.heading-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: var(--black);
 }
 .header {
   position: sticky;
@@ -88,79 +106,119 @@ section {
   color: var(--black);
   display: none;
 }
-.services .box-container{
+/* home */
+.home {
+  padding: 0;
+}
+
+.home .slide {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 60rem;
+}
+
+.home .slide .content {
+  width: 85rem;
+  display: none;
+}
+.home .swiper-slide-active .content {
+  display: inline-block;
+}
+.home .slide .content span {
+  display: block;
+  font-size: 2.2rem;
+  color: var(--light-white);
+  padding-bottom: 1rem;
+  animation: fadeIn 0.4s linear backwards 0.3s;
+}
+.home .slide .content h3 {
+  font-size: 6vw;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1;
+  text-shadow: var(--text-shadow);
+  padding: 1rem 0;
+  animation: fadeIn 0.4s linear backwards 0.3s;
+}
+
+.home .slide .content .btn {
+  animation: fadeIn 0.4s linear backwards 0.3s;
+}
+.services .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1.5rem;
 }
-.services .box-container .box{
-  padding:3rem 2rem;
-  text-align:center;
+.services .box-container .box {
+  padding: 3rem 2rem;
+  text-align: center;
   background: var(--main-color);
 }
-.services .box-container .box:hover{
-    background: var(--black);
+.services .box-container .box:hover {
+  background: var(--black);
 }
-.services .box-container .box img{
-    height:7pxrem;
-    cursor:pointer;
+.services .box-container .box img {
+  height: 7pxrem;
+  cursor: pointer;
 }
-.services .box-container .box h3{
-    color: var(--white);
-    font-size:1.7rem;
-    padding-top:1rem;
+.services .box-container .box h3 {
+  color: var(--white);
+  font-size: 1.7rem;
+  padding-top: 1rem;
 }
 
-/* footer */
-.footer{
+.footer {
   background: url(../images/footer-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.footer .box-container{
+.footer .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
 }
 
-.footer .box-container .box h3{
-  color:var(--white);
-  font-size: 2.5rem;
+.footer .box-container .box h3 {
+  color: var(--white);
+  font-size: 2rem;
   padding-bottom: 2rem;
 }
 
-.footer .box-container .box a{
-  color:var(--light-white);
-  font-size: 1.5rem;
+.footer .box-container .box a {
+  color: var(--light-white);
+  font-size: 1.3rem;
   padding-bottom: 1.5rem;
   display: block;
 }
 
-.footer .box-container .box a i{
-  color:var(--main-color);
-  padding-right: .5rem;
-  transition: .2s linear;
+.footer .box-container .box a i {
+  color: var(--main-color);
+  padding-right: 0.5rem;
+  transition: 0.2s linear;
 }
 
-.footer .box-container .box a:hover i{
+.footer .box-container .box a:hover i {
   padding-right: 2rem;
 }
 
-.footer .credit{
+.footer .credit {
   text-align: center;
   padding-top: 3rem;
   margin-top: 3rem;
-  border-top: .1rem solid var(--light-white);
+  border-top: 0.1rem solid var(--light-white);
   font-size: 2rem;
-  color:var(--white);
+  color: var(--white);
 }
 
-.footer .credit span{
-  color:var(--main-color);
+.footer .credit span {
+  color: var(--main-color);
 }
-
-
 
 /* media queries */
 @media (max-width: 1200px) {

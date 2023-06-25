@@ -149,6 +149,31 @@ section {
 .home .slide .content .btn {
   animation: fadeIn 0.4s linear backwards 0.3s;
 }
+.home .swiper-button-next,
+.home .swiper-button-prev{
+  top:inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+  height: 7rem;
+  width: 7rem;
+  background: var(--white);
+  color:var(--black);
+}
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover{
+  background: var(--main-color);
+  color:var(--white);
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after{
+  font-size: 2rem;
+}
+
+.home .swiper-button-prev{
+  right: 7rem;
+}
 .services .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -163,7 +188,7 @@ section {
   background: var(--black);
 }
 .services .box-container .box img {
-  height: 7pxrem;
+  height: 7rem;
   cursor: pointer;
 }
 .services .box-container .box h3 {
@@ -173,9 +198,8 @@ section {
 }
 
 .footer {
-  background: url(../images/footer-bg.jpg) no-repeat;
   background-size: cover;
-  background-position: center;
+  background: url(../images/footer-bg.jpg) no-repeat center;
 }
 
 .footer .box-container {
@@ -234,6 +258,9 @@ section {
 
   section {
     padding: 3rem 2rem;
+  }
+  .home .slide .content h3 {
+    font-size: 10vw;
   }
 }
 

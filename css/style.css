@@ -242,6 +242,7 @@ section {
     line-height: 2;
     color: var(--black);
 }
+/*home packages*/
 .home-packages {
     background: var(--light-bg);
 }
@@ -284,6 +285,43 @@ section {
     text-align: center;
     margin-top: 2rem;
 }
+/*
+===============
+home offer starts
+===============
+*/
+.home-offer {
+    text-align: center;
+}
+.home-offer .content {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.home-offer .content h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.home-offer .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+
+/*
+===============
+home offer ends
+===============
+*/
+
 .footer {
     background-size: cover;
     background: url(../images/footer-bg.jpg) no-repeat center;

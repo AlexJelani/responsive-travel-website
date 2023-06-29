@@ -348,6 +348,13 @@ home offer ends
 
 /*about section */
 
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:3rem;
+}
+
 .about .image{
     flex:1 1 41rem;
 }
@@ -383,23 +390,21 @@ home offer ends
 
 .about .content .icons-container .icons{
     background: var(--light-bg);
-    padding: 2rem;
-    flex: 1 1 16rem;
+    padding:2rem;
+    flex:1 1 16rem;
 }
-.about .content .icons-container .icons i {
+
+.about .content .icons-container .icons i{
     font-size: 4rem;
     margin-bottom: 2rem;
     color:var(--main-color);
-
 }
-.about .content .icons-container .icons span {
+
+.about .content .icons-container .icons span{
     font-size: 1.5rem;
     color:var(--light-black);
-    display: block;
-
+    display:block;
 }
-
-
 
 .footer {
     background-size: cover;

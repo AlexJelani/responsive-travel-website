@@ -78,7 +78,6 @@
 <!-- home section ends -->
 
 
-<!-- home section ends  -->
 <!-- services section starts  -->
 <section class="services">
     <h1 class="heading-title">our services</h1>
@@ -183,6 +182,7 @@
     </div>
 </section>
 <!--home offer section ends-->
+
 
 <!-- footer section starts  -->
 

@@ -52,6 +52,24 @@ section {
     }
 }
 
+.heading {
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.heading h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow:var(--text-shadow);
+
+}
+
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -242,20 +260,24 @@ section {
     line-height: 2;
     color: var(--black);
 }
+
 /*home packages*/
 .home-packages {
     background: var(--light-bg);
 }
+
 .home-packages .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
 }
+
 .home-packages .box-container .box {
     border: var(--border);
     box-shadow: var(--box-shadow);
     background: var(--white);
 }
+
 .home-packages .box-container .box .image {
     height: 25rem;
     overflow: hidden;
@@ -267,24 +289,29 @@ section {
     object-fit: cover;
     transition: .2s linear;
 }
+
 .home-packages .box-container .box .content {
     padding: 2rem;
     text-align: center;
 }
+
 .home-packages .box-container .box .content h3 {
     font-size: 2.5rem;
     color: var(--black);
 }
+
 .home-packages .box-container .box .content p {
     font-size: 2.5rem;
     color: var(--light-black);
     line-height: 2;
     padding: 1rem 0;
 }
+
 .home-packages .load-more {
     text-align: center;
     margin-top: 2rem;
 }
+
 /*
 ===============
 home offer starts
@@ -293,17 +320,19 @@ home offer starts
 .home-offer {
     text-align: center;
 }
+
 .home-offer .content {
     max-width: 70rem;
     margin: 0 auto;
 }
-.home-offer .content h3{
+
+.home-offer .content h3 {
     font-size: 4rem;
     text-transform: uppercase;
     color: var(--black);
 }
 
-.home-offer .content p{
+.home-offer .content p {
     font-size: 1.5rem;
     color: var(--light-black);
     line-height: 2;
@@ -311,16 +340,66 @@ home offer starts
 }
 
 
-
-
-
-
-
 /*
 ===============
 home offer ends
 ===============
 */
+
+/*about section */
+
+.about .image{
+    flex:1 1 41rem;
+}
+
+.about .image img{
+    width: 100%;
+}
+
+.about .content{
+    flex:1 1 41rem;
+    text-align: center;
+}
+
+.about .content h3{
+    font-size: 3rem;
+    color:var(--black);
+}
+
+.about .content p{
+    font-size: 1.5rem;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+}
+
+.about .content .icons-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: flex-end;
+}
+
+.about .content .icons-container .icons{
+    background: var(--light-bg);
+    padding: 2rem;
+    flex: 1 1 16rem;
+}
+.about .content .icons-container .icons i {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color:var(--main-color);
+
+}
+.about .content .icons-container .icons span {
+    font-size: 1.5rem;
+    color:var(--light-black);
+    display: block;
+
+}
+
+
 
 .footer {
     background-size: cover;

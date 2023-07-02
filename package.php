@@ -92,6 +92,76 @@
                 <a href="book.php" class="btn">book now</a>
             </div>
         </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/img-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>adventure & tour</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                <a href="book.php" class="btn">book now</a>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-7.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-8.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-9.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-10.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-11.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/img-12.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, porro.</p>
+                    <a href="book.php" class="btn">book now</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

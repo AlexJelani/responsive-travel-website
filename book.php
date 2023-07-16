@@ -7,14 +7,16 @@ if (!$connection) {
 $errors = array();
 
 if (isset($_POST['send'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $location = $_POST['location'];
-    $guests = $_POST['guests'];
+    //Sanitize data
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_NUMBER_INT);
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
+    $location = filter_input(INPUT_POST, 'location', FILTER_SANITIZE_STRING);
+    $guests = filter_input(INPUT_POST, 'guests', FILTER_SANITIZE_NUMBER_INT);
     $arrivals = $_POST['arrivals'];
     $leaving = $_POST['leaving'];
+
 
     // Validate name
     if (empty($name)) {
@@ -34,7 +36,7 @@ if (isset($_POST['send'])) {
     if (empty($phone)) {
         $errors['phone'] = "Phone number is required";
     } elseif (!preg_match("/^[0-9]{10}$/", $phone)) {
-        $errors['phone'] = "Invalid phone number format";
+        $errors['phone'] = "Invalid phone number format. Need 10 numbers";
     }
 
     // Validate address

@@ -49,8 +49,10 @@ loadMoreBtn.onclick = () => {
     loadMoreBtn.style.display = 'none';
   }
 }
-
-
+function showSuccessModal() {
+  const modal = document.getElementById("success-modal");
+  modal.classList.remove("hidden");
+}
 
 
 

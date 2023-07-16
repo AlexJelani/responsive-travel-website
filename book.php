@@ -61,8 +61,7 @@ if (isset($_POST['send'])) {
 
         $result = mysqli_query($connection, $request);
         if ($result) {
-            header('Location: book.php');
-            exit;
+            echo '<script>showSuccessModal();</script>'; // Call the JavaScript function to show the success modal
         } else {
             echo 'Query error: ' . mysqli_error($connection);
         }
@@ -177,6 +176,15 @@ if (isset($_POST['send'])) {
 </section>
 
 <!-- booking section ends -->
+<!-- success modal -->
+<div id="success-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Form Submitted Successfully!</h2>
+        <p>Your form has been submitted successfully. Thank you!</p>
+    </div>
+</div>
+<!-- success modal ends-->
 
 <!-- footer section starts  -->
 

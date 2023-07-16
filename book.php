@@ -1,3 +1,74 @@
+<?php
+$connection = mysqli_connect('localhost', 'root', '', 'book_db');
+if (!$connection) {
+    die('Database connection error: ' . mysqli_connect_error());
+}
+
+$errors = array();
+
+if (isset($_POST['send'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $location = $_POST['location'];
+    $guests = $_POST['guests'];
+    $arrivals = $_POST['arrivals'];
+    $leaving = $_POST['leaving'];
+
+    // Validate name
+    if (empty($name)) {
+        $errors['name'] = "Name is required";
+    } elseif (strlen($name) < 2 || strlen($name) > 20) {
+        $errors['name'] = "Name must be between 2 and 20 characters";
+    }
+
+    // Validate email
+    if (empty($email)) {
+        $errors['email'] = "Email is required";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "Invalid email format";
+    }
+
+    // Validate phone number
+    if (empty($phone)) {
+        $errors['phone'] = "Phone number is required";
+    } elseif (!preg_match("/^[0-9]{10}$/", $phone)) {
+        $errors['phone'] = "Invalid phone number format";
+    }
+
+    // Validate address
+    if (empty($address)) {
+        $errors['address'] = "Address is required";
+    }
+
+    // Validate location
+    if (empty($location)) {
+        $errors['location'] = "Location is required";
+    }
+
+    // Validate number of guests
+    if (empty($guests)) {
+        $errors['guests'] = "Number of guests is required";
+    } elseif (!preg_match("/^[1-9][0-9]*$/", $guests)) {
+        $errors['guests'] = "Invalid number of guests";
+    }
+
+    if (empty($errors)) {
+        $request = "INSERT INTO book_form (name, email, phone, address, location, guests, arrivals, leaving) VALUES ('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving')";
+
+        $result = mysqli_query($connection, $request);
+        if ($result) {
+            header('Location: book.php');
+            exit;
+        } else {
+            echo 'Query error: ' . mysqli_error($connection);
+        }
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,32 +113,50 @@
 
     <h1 class="heading-title">book your trip!</h1>
 
-    <form action="book_form.php" method="post" class="book-form">
+    <form action="book.php" method="post" class="book-form">
 
         <div class="flex">
             <div class="inputBox">
                 <span>name :</span>
                 <input type="text" placeholder="enter your name" name="name">
+                <?php if (isset($errors['name'])) { ?>
+                    <span class="error"><?php echo $errors['name']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>email :</span>
                 <input type="email" placeholder="enter your email" name="email">
+                <?php if (isset($errors['email'])) { ?>
+                    <span class="error"><?php echo $errors['email']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>phone :</span>
                 <input type="number" placeholder="enter your number" name="phone">
+                <?php if (isset($errors['phone'])) { ?>
+                    <span class="error"><?php echo $errors['phone']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>address :</span>
                 <input type="text" placeholder="enter your address" name="address">
+                <?php if (isset($errors['address'])) { ?>
+                    <span class="error"><?php echo $errors['address']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>where to :</span>
                 <input type="text" placeholder="place you want to visit" name="location">
+                <?php if (isset($errors['location'])) { ?>
+                    <span class="error"><?php echo $errors['location']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>how many :</span>
                 <input type="number" placeholder="number of guests" name="guests">
+                <?php if (isset($errors['guests'])) { ?>
+                    <span class="error"><?php echo $errors['guests']; ?></span>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <span>arrivals :</span>

@@ -561,6 +561,11 @@ home offer ends
     color: white;
 }
 
+.booking .book-form .flex .inputBox .error {
+    font-size: 1.4rem;
+    color: red;
+    margin-left: 1rem;
+}
 
 
 

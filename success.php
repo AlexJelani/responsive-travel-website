@@ -61,7 +61,7 @@ if (isset($_POST['send'])) {
 
         $result = mysqli_query($connection, $request);
         if ($result) {
-            header('Location: success.php'); // Redirect to home.php
+            header('Location: home.php'); // Redirect to home.php
             exit; // Terminate the current script
         } else {
             echo 'Query error: ' . mysqli_error($connection);
@@ -112,71 +112,17 @@ if (isset($_POST['send'])) {
 <!-- booking section starts  -->
 
 <section class="booking">
-
-    <h1 class="heading-title">book your trip!</h1>
-
-    <form action="book.php" method="post" class="book-form">
-
-        <div class="flex">
-            <div class="inputBox">
-                <span>name :</span>
-                <input type="text" placeholder="enter your name" name="name">
-                <?php if (isset($errors['name'])) { ?>
-                    <span class="error"><?php echo $errors['name']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>email :</span>
-                <input type="email" placeholder="enter your email" name="email">
-                <?php if (isset($errors['email'])) { ?>
-                    <span class="error"><?php echo $errors['email']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>phone :</span>
-                <input type="number" placeholder="enter your number" name="phone">
-                <?php if (isset($errors['phone'])) { ?>
-                    <span class="error"><?php echo $errors['phone']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>address :</span>
-                <input type="text" placeholder="enter your address" name="address">
-                <?php if (isset($errors['address'])) { ?>
-                    <span class="error"><?php echo $errors['address']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>where to :</span>
-                <input type="text" placeholder="place you want to visit" name="location">
-                <?php if (isset($errors['location'])) { ?>
-                    <span class="error"><?php echo $errors['location']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>how many :</span>
-                <input type="number" placeholder="number of guests" name="guests">
-                <?php if (isset($errors['guests'])) { ?>
-                    <span class="error"><?php echo $errors['guests']; ?></span>
-                <?php } ?>
-            </div>
-            <div class="inputBox">
-                <span>arrivals :</span>
-                <input type="date" name="arrivals">
-            </div>
-            <div class="inputBox">
-                <span>leaving :</span>
-                <input type="date" name="leaving">
-            </div>
+    <!-- success modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Form Submitted Successfully!</h2>
+            <p>Your form has been submitted successfully. Thank you!</p>
         </div>
+    </div>
+    <!-- success modal ends-->
+    <h1 class="heading-title">Thank you for booking your trip with us!</h1>
 
-        <input type="submit" value="submit" class="btn" name="send">
 
-    </form>
-
-</section>
-
-<!-- booking section ends -->
 
 
 <!-- footer section starts  -->

@@ -68,5 +68,3 @@ loadMoreBtn.onclick = () => {
 
 
 
-
-

@@ -115,7 +115,6 @@ if (isset($_POST['send'])) {
     <!-- success modal -->
     <div id="success-modal" class="modal hidden">
         <div class="modal-content">
-            <span class="close">&times;</span>
             <h2>Form Submitted Successfully!</h2>
             <p>Your form has been submitted successfully. Thank you!</p>
         </div>
